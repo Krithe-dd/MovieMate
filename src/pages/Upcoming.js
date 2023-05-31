@@ -1,5 +1,5 @@
 import React from "react";
-import { useLoaderData, json } from "react-router-dom";
+import { useLoaderData } from "react-router-dom";
 import Card from "../components/Card";
 import { loader } from "../components/loader";
 const Upcoming = () => {
