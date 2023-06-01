@@ -7,7 +7,7 @@ const Card = ({movie}) => {
   const image = poster_path ? `https://image.tmdb.org/t/p/w500/${poster_path}` : backUp;
   return (
 
-      <div className="max-w-md  bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+      <div className="sm:w-1/2 lg:w-1/4 md:w-1/3 bg-white border mx-3 border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
         <Link to={`/movies/${id}`}>
           <img className="rounded-t-lg" src={image} alt="" />
         </Link>

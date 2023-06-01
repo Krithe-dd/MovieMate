@@ -17,11 +17,9 @@ const MovieDetail = () => {
 export const loaderEvents =async (id) => {
   const response = await fetch(`https://api.themoviedb.org/3/movie/${id}?api_key=${process.env.REACT_APP_API_KEY}`)
   if(!response.ok){
-    console.log('Error from loader');
     throw new Error ('Cant find this page')
   }else{
     const data = await response.json();
-    console.log('Passed');
     document.title=data.title   
     return data;
   }

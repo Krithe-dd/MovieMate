@@ -32,7 +32,7 @@ const Search = () => {
           </p>
         )}
       </div>
-      <section className="max-w-7xl mx-auto py-5">
+      <section className="max-w-full py-5">
         <div className="flex flex-wrap gap-8 justify-evenly">
           {searchedMovies.map((movie) => (
             <Card movie={movie} key={movie.id} />

@@ -6,8 +6,8 @@ const Upcoming = () => {
   const data = useLoaderData();
   const upcomingMovies = data.results;
   return (
-    <section className="max-w-screen-2xl mx-auto py-5">
-      <div className="flex flex-wrap gap-20  justify-evenly">
+    <section className="max-w-full  py-5">
+      <div className="flex flex-wrap gap-10  justify-center">
       
         { upcomingMovies.map((movie) => (
           <Card movie={movie} key={movie.id} />

@@ -7,8 +7,8 @@ const Popular = () => {
   const data = useLoaderData();
   const popularMovies = data.results;
   return (
-    <section className="max-w-screen-2xl mx-auto py-5">
-      <div className="flex flex-wrap gap-20  justify-evenly">
+    <section className="max-w-full py-5">
+      <div className="flex flex-wrap gap-10 justify-center">
         {popularMovies.map((movie) => (
           <Card movie={movie} key={movie.id} />
         ))}

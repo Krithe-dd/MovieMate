@@ -10,23 +10,23 @@ const SingleMovie = ({ movie }) => {
   const {genres}=movie
   return (
     <div>
-      <section className="flex justify-around flex-wrap py-5">
-        <div className=" max-w-lg">
+      <section className="max-w-full flex other:items-center other:flex-col gap-10 justify-center p-5">
+        <div className="w-2/5 other:w-80">
           <img
             className="rounded"
             src={image}
             alt={movie.title}
           ></img>
         </div>
-        <div className="max-w-5xl md:text-center my-20 flex flex-col gap-10 text-gray-700 text-xl dark:text-white">
+        <div className="w-2/4 other:w-3/4 md:text-center my-20 flex flex-col gap-10 text-gray-700 dark:text-white">
           <div className="my-3 text-center lg:text-left">
-            <div className="other:text-center text-left md:text-left text-5xl font-bold mb-5">{movie.title}</div>
-            <div className="text-xl">{movie.overview}</div>
+            <div className="other:text-center text-left md:text-left text-4xl font-bold mb-5">{movie.title}</div>
+            <div className="text-lg">{movie.overview}</div>
           </div>
-          <div className="flex other:mx-auto">
+          <div className="flex other:flex-wrap other:justify-center other:mx-auto">
             {genres?.map(genre=><Outline key={genre.name} name={genre.name}/>)}
           </div>
-          <div className="flex-col flex gap-8 text-left other:mx-auto">
+          <div className="flex-col flex gap-6 text-left other:mx-auto">
             <div className="font-bold">
               ⭐{rating && rating.toFixed(1)}- {movie.vote_count} votes
             </div>
